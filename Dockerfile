@@ -3,20 +3,20 @@ FROM openjdk:19-jdk AS build
 WORKDIR /app
 
 # Debug: List all files before copying
-RUN ls -a
+RUN echo "Listing files before copying:" && ls -a
 
 COPY pom.xml .
 COPY src src
 
 # Debug: List all files after copying pom.xml and src
-RUN ls -a
+RUN echo "Listing files after copying pom.xml and src:" && ls -a
 
 # Copy Maven wrapper
 COPY mvnw .
 COPY .mvn .mvn
 
 # Debug: List all files after copying .mvn and mvnw
-RUN ls -a
+RUN echo "Listing files after copying .mvn and mvnw:" && ls -a
 
 # Set execution permission for the Maven wrapper
 RUN chmod +x ./mvnw
