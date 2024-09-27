@@ -1,3 +1,5 @@
+# Trigger fresh build
+
 # Importing JDK and copying required files
 FROM openjdk:19-jdk AS build
 WORKDIR /app
