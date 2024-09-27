@@ -10,6 +10,8 @@ COPY src src
 COPY mvnw .
 COPY .mvn .mvn
 
+ls
+
 # Set execution permission for the Maven wrapper
 RUN chmod +x ./mvnw
 RUN ./mvnw clean package -DskipTests
